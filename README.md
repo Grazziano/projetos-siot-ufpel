@@ -1,4 +1,4 @@
-# Repositórios de Pesquisa - LUPS/UFPel
+# Repositórios de Pesquisa - UFPel
 
 Este repositório centraliza os principais trabalhos e aplicações desenvolvidas no contexto do **Laboratório de Sistemas Ubíquos e Paralelos (LUPS)** da **Universidade Federal de Pelotas (UFPel)**, com foco em **objetos sociais**, **interações virtuais** e **infraestruturas de dados para a Internet das Coisas Social (SIoT)**.
 
@@ -40,7 +40,7 @@ API desenvolvida em **NestJS** com persistência de dados em **MongoDB**, como p
 
 ## 🧪 Contexto de Pesquisa
 
-Os repositórios aqui descritos compõem o ecossistema de soluções investigadas e desenvolvidas no LUPS/UFPel, no âmbito das linhas de pesquisa:
+Os repositórios aqui descritos compõem o ecossistema de soluções investigadas e desenvolvidas na UFPel, no âmbito das linhas de pesquisa:
 
 - Internet das Coisas (IoT) e IoT Social
 - Sistemas Distribuídos e Ubíquos
@@ -63,8 +63,8 @@ A proposta integra aspectos teóricos e práticos, envolvendo desde a definiçã
 
 ## 📨 Contato e Colaboração
 
-Para informações adicionais ou sugestões de colaboração, entre em contato com os pesquisadores responsáveis por cada repositório, ou com a coordenação do **LUPS/UFPel**.
+Para informações adicionais ou sugestões de colaboração, entre em contato com os pesquisadores responsáveis por cada repositório, ou com a coordenação da **UFPel**.
 
 ---
 
-> Este conjunto de projetos representa o esforço contínuo do LUPS/UFPel em promover a inovação científica e tecnológica por meio da pesquisa aplicada em sistemas inteligentes e Internet das Coisas.
+> Este conjunto de projetos representa o esforço contínuo da UFPel em promover a inovação científica e tecnológica por meio da pesquisa aplicada em sistemas inteligentes e Internet das Coisas.

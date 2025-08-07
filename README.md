@@ -32,9 +32,9 @@ Aplicativo móvel desenvolvido com **Flutter**, voltado à visualização e inte
 
 ---
 
-### 🔹 [VISO-B.A.S.S. - Based API for Structured Storage](https://github.com/Grazziano/VISO-BASS)
+### 🔹 [VISO-B.A.S.S. - VISO Based API for Structured Storage](https://github.com/Grazziano/VISO-BASS)
 
-API desenvolvida em **NestJS** com persistência de dados em **MongoDB**, como parte do projeto de mestrado vinculado à proposta de **solução estrutural para a persistência de dados na Social IoT**. O repositório implementa modelos para entidades como Interações, Objetos, Ambientes e Relacionamentos, com foco em consultas otimizadas e estrutura escalável.
+Uma API com foco em armazenamento estruturado, baseada no modelo VISO. API foi desenvolvida em **NestJS** com persistência de dados em **MongoDB**, como parte do projeto de mestrado vinculado à proposta de **solução estrutural para a persistência de dados na Social IoT**. O repositório implementa modelos para entidades como Interações, Objetos, Ambientes e Relacionamentos, com foco em consultas otimizadas e estrutura escalável.
 
 ---
 

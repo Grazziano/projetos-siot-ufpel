@@ -1,4 +1,13 @@
-# Repositórios de Pesquisa - UFPel
+<table width="100%">
+  <tr>
+    <td>
+      <h1>Repositórios de Pesquisa - UFPel</h1>
+    </td>
+    <td align="right" width="150">
+      <img src="imgs/Escudo Colorido UFPEL_10042014.png" alt="Logo UFPel" width="120"/>
+    </td>
+  </tr>
+</table>
 
 Este repositório centraliza os principais trabalhos e aplicações desenvolvidas no contexto do **Laboratório de Sistemas Ubíquos e Paralelos (LUPS)** da **Universidade Federal de Pelotas (UFPel)**, com foco em **objetos sociais**, **interações virtuais** e **infraestruturas de dados para a Internet das Coisas Social (SIoT)**.
 
@@ -16,7 +25,7 @@ Repositório institucional do grupo de pesquisa LUPS. Contém documentos de refe
 
 ### 🔹 [iData – Repositório de Arquivos do TCC](https://github.com/thalialongaray/iData)
 
-Repositório vinculado ao Trabalho de Conclusão de Curso *iData*, cujo objetivo é propor uma solução para gerenciamento e modelagem de dados sociais, com ênfase em ambientes de IoT. Inclui códigos, esquemas de dados e resultados experimentais.
+Repositório vinculado ao Trabalho de Conclusão de Curso _iData_, cujo objetivo é propor uma solução para gerenciamento e modelagem de dados sociais, com ênfase em ambientes de IoT. Inclui códigos, esquemas de dados e resultados experimentais.
 
 ---
 

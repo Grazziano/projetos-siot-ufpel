@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #006747;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-placeholder {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border: 3px solid #8ec641;
+  font-weight: bold;
+  color: #006747;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.logo-placeholder img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.title-container {
+  flex: 1;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #006747;
+  margin: 25px 0 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #8ec641;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.repo-list {
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+.repo-item {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border-left: 4px solid #006747;
+}
+
+.repo-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.repo-icon {
+  margin-right: 10px;
+  color: #006747;
+  font-size: 20px;
+}
+
+.repo-link {
+  color: #006747;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+  color: #8ec641;
+}
+
+.repo-description {
+  margin-left: 30px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tech-item {
+  background-color: #e8f4e5;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #006747;
+  border: 1px solid #8ec641;
+}
+
+.contact {
+  background-color: #e8f4e5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  border-left: 4px solid #006747;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+  border-top: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-placeholder {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .repo-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .repo-icon {
+    margin-bottom: 5px;
+  }
+}

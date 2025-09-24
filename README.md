@@ -42,6 +42,12 @@ Uma API com foco em armazenamento estruturado, baseada no modelo VISO. API foi d
 
 ---
 
+### 🔹 [Ontologia](https://github.com/Ryhx/ontologia)
+
+ontologia para representacao de relacionamentos em SIoT
+
+---
+
 ## 🧪 Contexto de Pesquisa
 
 Os repositórios aqui descritos compõem o ecossistema de soluções investigadas e desenvolvidas na UFPel, no âmbito das linhas de pesquisa:

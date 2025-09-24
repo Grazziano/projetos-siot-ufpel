@@ -11,9 +11,9 @@ export default function Technologies() {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-        <span className="mr-2">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
+      <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
+        <span className="mr-2 dark:text-blue-400">
           <Hammer />
         </span>
         Tecnologias Utilizadas
@@ -23,7 +23,7 @@ export default function Technologies() {
         {tecks.map((tech) => (
           <Badge
             variant="outline"
-            className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
+            className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-50 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
             asChild
           >
             <a href={tech.link} target="_blank">

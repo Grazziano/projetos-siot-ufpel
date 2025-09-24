@@ -40,9 +40,9 @@ export default function RepositoriesSection() {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-        <span className="mr-2">
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md dark:shadow-lg p-6 mb-8">
+      <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
+        <span className="mr-2 dark:text-blue-400">
           <Folder />
         </span>
         Repositórios Vinculados
@@ -52,22 +52,22 @@ export default function RepositoriesSection() {
         {repositories.map((repo, index) => (
           <li
             key={index}
-            className="border-l-4 border-blue-500 pl-4 hover:border-blue-700 transition-colors bg-blue-100 rounded-lg p-4"
+            className="border-l-4 border-blue-500 dark:border-blue-400 pl-4 hover:border-blue-700 dark:hover:border-blue-300 transition-colors bg-blue-100 dark:bg-gray-800 rounded-lg p-4"
           >
             <div className="flex items-start mb-2">
-              <span className="text-blue-500 mr-2 mt-1">
+              <span className="text-blue-500 dark:text-blue-400 mr-2 mt-1">
                 <CornerDownRight />
               </span>
               <a
                 href={repo.href}
-                className="text-lg font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+                className="text-lg font-semibold text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {repo.title}
               </a>
             </div>
-            <p className="text-gray-600 leading-relaxed ml-6">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed ml-6">
               {repo.description}
             </p>
           </li>

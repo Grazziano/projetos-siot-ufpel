@@ -1,6 +1,6 @@
 export default function Introduction() {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 mb-8">
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Este repositório centraliza os principais trabalhos e aplicações
         desenvolvidas no contexto do{' '}

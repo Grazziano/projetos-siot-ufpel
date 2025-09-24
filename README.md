@@ -1,5 +1,5 @@
 <div align="right" width="150">
-  <img src="imgs/Escudo Colorido UFPEL_10042014.png" alt="Logo UFPel" width="120"/>
+  <img src="./src/assets/imgs/Escudo Colorido UFPEL_10042014.png" alt="Logo UFPel" width="120"/>
 </div>
 
 # Repositórios de Pesquisa - UFPel

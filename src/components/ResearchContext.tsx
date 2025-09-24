@@ -14,7 +14,7 @@ export default function ResearchContext() {
         investigadas e desenvolvidas na UFPel, no âmbito das linhas de pesquisa:
       </p>
 
-      <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+      <ul className="list-disc marker:text-blue-800 list-inside text-gray-700 space-y-2 ml-4">
         <li>Internet das Coisas (IoT) e IoT Social</li>
         <li>Sistemas Distribuídos e Ubíquos</li>
         <li>Modelagem de Interações Sociais entre Objetos</li>

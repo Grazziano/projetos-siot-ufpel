@@ -1,4 +1,5 @@
-import { CornerDownRight, Folder } from 'lucide-react';
+import { Folder } from 'lucide-react';
+import AlertComponent from './AlertComponent';
 
 export default function RepositoriesSection() {
   const repositories = [
@@ -48,31 +49,9 @@ export default function RepositoriesSection() {
         Repositórios Vinculados
       </h2>
 
-      <ul className="space-y-6">
-        {repositories.map((repo, index) => (
-          <li
-            key={index}
-            className="border-l-4 border-blue-500 dark:border-blue-400 pl-4 hover:border-blue-700 dark:hover:border-blue-300 transition-colors bg-blue-100 dark:bg-gray-800 rounded-lg p-4"
-          >
-            <div className="flex items-start mb-2">
-              <span className="text-blue-500 dark:text-blue-400 mr-2 mt-1">
-                <CornerDownRight />
-              </span>
-              <a
-                href={repo.href}
-                className="text-lg font-semibold text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {repo.title}
-              </a>
-            </div>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed ml-6">
-              {repo.description}
-            </p>
-          </li>
-        ))}
-      </ul>
+      {repositories.map((repo) => (
+        <AlertComponent {...repo} key={repo.title} />
+      ))}
     </div>
   );
 }

@@ -20,7 +20,7 @@ function Footer({ className = '', showLinks = true }: FooterProps) {
 
   return (
     <footer
-      className={`bg-gray-900 text-white border-t border-gray-700 ${className}`}
+      className={`bg-white dark:bg-gray-900 border-t border-gray-700 ${className}`}
     >
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="py-8 md:py-12">
@@ -28,7 +28,7 @@ function Footer({ className = '', showLinks = true }: FooterProps) {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
             {/* Texto descritivo */}
             <div className="md:col-span-8 lg:col-span-9">
-              <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-4 font-light">
+              <p className="text-lg md:text-xl dark:text-gray-200 text-gray-900 leading-relaxed mb-4 font-light">
                 Este conjunto de projetos representa o esforço contínuo da{' '}
                 <span className="text-blue-400 font-medium">
                   Universidade Federal de Pelotas (UFPel)
@@ -39,13 +39,13 @@ function Footer({ className = '', showLinks = true }: FooterProps) {
               </p>
 
               <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
-                <span className="bg-gray-800 px-3 py-1 rounded-full flex items-center">
+                <span className="bg-blue-100 dark:bg-gray-800 text-gray-600 dark:text-gray-200 px-3 py-1 rounded-full flex items-center">
                   <Rocket size={16} className="mr-2" /> Inovação Científica
                 </span>
-                <span className="bg-gray-800 px-3 py-1 rounded-full flex items-center">
+                <span className="bg-blue-100 dark:bg-gray-800 text-gray-600 dark:text-gray-200 px-3 py-1 rounded-full flex items-center">
                   <Microscope size={16} className="mr-2" /> Pesquisa Aplicada
                 </span>
-                <span className="bg-gray-800 px-3 py-1 rounded-full flex items-center">
+                <span className="bg-blue-100 dark:bg-gray-800 text-gray-600 dark:text-gray-200 px-3 py-1 rounded-full flex items-center">
                   <Globe size={16} className="mr-2" /> Internet das Coisas
                 </span>
               </div>
@@ -54,7 +54,7 @@ function Footer({ className = '', showLinks = true }: FooterProps) {
             {/* Links rápidos (opcional) */}
             {showLinks && (
               <div className="md:col-span-4 lg:col-span-3">
-                <h3 className="font-semibold text-gray-300 mb-4 text-lg">
+                <h3 className="font-semibold text-gray-600 dark:text-gray-300 mb-4 text-lg">
                   Links Rápidos
                 </h3>
                 <ul className="space-y-2">

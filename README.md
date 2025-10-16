@@ -44,7 +44,7 @@ Uma API com foco em armazenamento estruturado, baseada no modelo VISO. API foi d
 
 ### 🔹 [Ontologia](https://github.com/Ryhx/ontologia)
 
-ontologia para representacao de relacionamentos em SIoT
+Este repositório contém o código e artefatos de uma ontologia desenvolvida para a representação formal do conhecimento em ambientes de SIoT. A ontologia define conceitos, propriedades e instâncias que descrevem as entidades (Objetos, Pessoas, Ambientes) e, principalmente, os relacionamentos sociais e interações entre elas, permitindo consultas avançadas e raciocínio automático.
 
 ---
 

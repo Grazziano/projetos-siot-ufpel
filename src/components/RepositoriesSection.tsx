@@ -36,7 +36,7 @@ export default function RepositoriesSection() {
     {
       href: 'https://github.com/Ryhx/ontologia',
       title: 'Ontologia para representação de relacionamentos em SIoT',
-      description: 'Ontologia para representação de relacionamentos em SIoT',
+      description: 'Este repositório contém o código e artefatos de uma ontologia desenvolvida para a representação formal do conhecimento em ambientes de SIoT. A ontologia define conceitos, propriedades e instâncias que descrevem as entidades (Objetos, Pessoas, Ambientes) e, principalmente, os relacionamentos sociais e interações entre elas, permitindo consultas avançadas e raciocínio automático.',
     },
   ];
 

@@ -2,11 +2,11 @@ import {
   Github,
   Globe,
   Heart,
-  // Mail,
   Microscope,
   Pin,
   Rocket,
   University,
+  ExternalLink,
 } from 'lucide-react';
 import { memo } from 'react';
 
@@ -20,17 +20,23 @@ function Footer({ className = '', showLinks = true }: FooterProps) {
 
   return (
     <footer
-      className={`bg-white dark:bg-gray-900 border-t border-gray-700 ${className}`}
+      className={`bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200/50 dark:border-gray-700/50 shadow-lg ${className}`}
     >
+      {/* Barra decorativa superior */}
+      <div className="relative h-1.5 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-green-600 opacity-90 animate-gradient-x" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
+      </div>
+
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="py-8 md:py-12">
+        <div className="py-10 md:py-14 lg:py-16">
           {/* Conteúdo principal */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 mb-10">
             {/* Texto descritivo */}
             <div className="md:col-span-8 lg:col-span-9">
-              <p className="text-lg md:text-xl dark:text-gray-200 text-gray-900 leading-relaxed mb-4 font-light">
+              <p className="text-base md:text-lg lg:text-xl dark:text-gray-200 text-gray-800 leading-relaxed mb-6 font-light">
                 Este conjunto de projetos representa o esforço contínuo da{' '}
-                <span className="text-blue-400 font-medium">
+                <span className="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
                   Universidade Federal de Pelotas (UFPel)
                 </span>{' '}
                 em promover a inovação científica e tecnológica por meio da
@@ -38,15 +44,27 @@ function Footer({ className = '', showLinks = true }: FooterProps) {
                 Coisas.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
-                <span className="bg-blue-100 dark:bg-gray-800 text-gray-600 dark:text-gray-200 px-3 py-1 rounded-full flex items-center">
-                  <Rocket size={16} className="mr-2" /> Inovação Científica
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="group relative bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium border border-blue-200/50 dark:border-blue-800/50 hover:border-blue-400 dark:hover:border-blue-600 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                  <Rocket
+                    size={18}
+                    className="text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform"
+                  />
+                  <span>Inovação Científica</span>
                 </span>
-                <span className="bg-blue-100 dark:bg-gray-800 text-gray-600 dark:text-gray-200 px-3 py-1 rounded-full flex items-center">
-                  <Microscope size={16} className="mr-2" /> Pesquisa Aplicada
+                <span className="group relative bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium border border-indigo-200/50 dark:border-indigo-800/50 hover:border-indigo-400 dark:hover:border-indigo-600 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                  <Microscope
+                    size={18}
+                    className="text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform"
+                  />
+                  <span>Pesquisa Aplicada</span>
                 </span>
-                <span className="bg-blue-100 dark:bg-gray-800 text-gray-600 dark:text-gray-200 px-3 py-1 rounded-full flex items-center">
-                  <Globe size={16} className="mr-2" /> Internet das Coisas
+                <span className="group relative bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium border border-purple-200/50 dark:border-purple-800/50 hover:border-purple-400 dark:hover:border-purple-600 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                  <Globe
+                    size={18}
+                    className="text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform"
+                  />
+                  <span>Internet das Coisas</span>
                 </span>
               </div>
             </div>
@@ -54,18 +72,29 @@ function Footer({ className = '', showLinks = true }: FooterProps) {
             {/* Links rápidos (opcional) */}
             {showLinks && (
               <div className="md:col-span-4 lg:col-span-3">
-                <h3 className="font-semibold text-gray-600 dark:text-gray-300 mb-4 text-lg">
+                <h3 className="font-bold text-gray-800 dark:text-gray-100 mb-5 text-lg md:text-xl flex items-center gap-2">
+                  <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-indigo-500 rounded-full" />
                   Links Rápidos
                 </h3>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   <li>
                     <a
                       href="https://ufpel.edu.br"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center gap-1"
+                      className="group text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 text-sm flex items-center gap-2 hover:gap-3 font-medium"
                     >
-                      <Globe size={16} /> Site Oficial UFPel
+                      <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors">
+                        <Globe
+                          size={16}
+                          className="text-blue-600 dark:text-blue-400"
+                        />
+                      </div>
+                      <span>Site Oficial UFPel</span>
+                      <ExternalLink
+                        size={14}
+                        className="opacity-0 group-hover:opacity-100 transition-opacity"
+                      />
                     </a>
                   </li>
                   <li>
@@ -73,62 +102,79 @@ function Footer({ className = '', showLinks = true }: FooterProps) {
                       href="https://github.com/Grazziano/projetos-siot-ufpel"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center gap-1"
+                      className="group text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 text-sm flex items-center gap-2 hover:gap-3 font-medium"
                     >
-                      <Github size={16} /> Repositórios GitHub
+                      <div className="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center group-hover:bg-gray-200 dark:group-hover:bg-gray-700 transition-colors">
+                        <Github
+                          size={16}
+                          className="text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
+                        />
+                      </div>
+                      <span>Repositórios GitHub</span>
+                      <ExternalLink
+                        size={14}
+                        className="opacity-0 group-hover:opacity-100 transition-opacity"
+                      />
                     </a>
                   </li>
-                  {/* <li>
-                    <a
-                      href="mailto:lups@ufpel.edu.br"
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center gap-1"
-                    >
-                      <Mail size={16} /> Contato LUPS
-                    </a>
-                  </li> */}
                 </ul>
               </div>
             )}
           </div>
 
           {/* Divisor */}
-          <div className="border-t border-gray-700 my-6" />
+          <div className="relative my-8">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-200 dark:border-gray-700"></div>
+            </div>
+            <div className="relative flex justify-center">
+              <div className="bg-white dark:bg-gray-900 px-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
+                  <University className="w-6 h-6 text-white" />
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Rodapé inferior */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-center md:text-left">
-              <p className="text-gray-400 text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="text-center md:text-left space-y-2">
+              <p className="text-gray-500 dark:text-gray-400 text-sm">
                 © {currentYear} Universidade Federal de Pelotas. Todos os
                 direitos reservados.
               </p>
-              <p className="text-gray-500 text-xs mt-1 flex items-center">
-                Desenvolvido com <Heart size={16} className="mr-1 ml-1" /> por{' '}
+              <p className="text-gray-500 dark:text-gray-400 text-xs flex items-center justify-center md:justify-start gap-1.5">
+                Desenvolvido com{' '}
+                <Heart size={14} className="text-red-500 animate-pulse" /> por{' '}
                 <a
                   href="https://github.com/Grazziano"
                   target="_blank"
-                  className="text-blue-400 ml-1 hover:underline"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium hover:underline transition-colors inline-flex items-center gap-1"
                 >
                   G. B. Fagundes
+                  <ExternalLink size={12} />
                 </a>
               </p>
             </div>
 
             {/* Informações de contato */}
-            <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-500">
-              <span className="flex items-center">
-                <Pin size={16} className="mr-1" /> Pelotas, RS - Brasil
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 text-xs text-gray-500 dark:text-gray-400">
+              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+                <Pin size={14} className="text-blue-600 dark:text-blue-400" />
+                <span>Pelotas, RS - Brasil</span>
               </span>
-              <span className="flex items-center">
-                <University size={16} className="mr-1" /> Centro de
-                Desenvolvimento Tecnológico
+              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+                <University
+                  size={14}
+                  className="text-indigo-600 dark:text-indigo-400"
+                />
+                <span>Centro de Desenvolvimento Tecnológico</span>
               </span>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Efeito de gradiente sutil no fim */}
-      <div className="h-1 bg-gradient-to-r from-blue-600 via-green-600 to-purple-600 opacity-60" />
     </footer>
   );
 }

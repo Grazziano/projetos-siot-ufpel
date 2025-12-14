@@ -29,10 +29,16 @@ export default function RepositoriesSection() {
         'Aplicativo móvel desenvolvido com Flutter, voltado à visualização e interação com dados gerados por objetos sociais. O projeto busca oferecer uma interface acessível para exploração de redes de interação, contribuindo para aplicações em cidades inteligentes, monitoramento ambiental e automação social.',
     },
     {
-      href: 'https://github.com/Grazziano/VISO-BASS',
+      href: 'https://github.com/Grazziano/viso-bass-api',
       title: 'VISO-B.A.S.S. - VISO Based API for Structured Storage',
       description:
         'Uma API com foco em armazenamento estruturado, baseada no modelo VISO. API foi desenvolvida em NestJS com persistência de dados em MongoDB, como parte do projeto de mestrado vinculado à proposta de solução estrutural para a persistência de dados na Social IoT. O repositório implementa modelos para entidades como Interações, Objetos, Ambientes e Relacionamentos, com foco em consultas otimizadas e estrutura escalável.',
+    },
+    {
+      href: 'https://github.com/Grazziano/viso-bass-web',
+      title: 'Frontend do VISO-B.A.S.S.',
+      description:
+        'Frontend do VISO-B.A.S.S. desenvolvido com React.js e Tailwind CSS. O projeto busca oferecer uma interface acessível para exploração de redes de interação, utilizando a api viso-bass.',
     },
     {
       href: 'https://github.com/Ryhx/ontologia',

@@ -1,14 +1,11 @@
 import { TestTubeDiagonal } from 'lucide-react';
+import Title from './Title';
 
 export default function ResearchContext() {
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 mb-8">
-      <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
-        <span className="mr-2 dark:text-blue-400">
-          <TestTubeDiagonal />
-        </span>
-        Contexto de Pesquisa
-      </h2>
+    <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md dark:shadow-lg p-6 md:p-8 mb-8">
+      <Title icon={TestTubeDiagonal} title="Contexto de Pesquisa" />
+
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Os repositórios aqui descritos compõem o ecossistema de soluções
         investigadas e desenvolvidas na UFPel, no âmbito das linhas de pesquisa:

@@ -1,5 +1,6 @@
 import { Folder } from 'lucide-react';
 import AlertComponent from './AlertComponent';
+import Title from './Title';
 
 export default function RepositoriesSection() {
   const repositories = [
@@ -36,18 +37,14 @@ export default function RepositoriesSection() {
     {
       href: 'https://github.com/Ryhx/ontologia',
       title: 'Ontologia para representação de relacionamentos em SIoT',
-      description: 'Este repositório contém o código e artefatos de uma ontologia desenvolvida para a representação formal do conhecimento em ambientes de SIoT. A ontologia define conceitos, propriedades e instâncias que descrevem as entidades (Objetos, Pessoas, Ambientes) e, principalmente, os relacionamentos sociais e interações entre elas, permitindo consultas avançadas e raciocínio automático.',
+      description:
+        'Este repositório contém o código e artefatos de uma ontologia desenvolvida para a representação formal do conhecimento em ambientes de SIoT. A ontologia define conceitos, propriedades e instâncias que descrevem as entidades (Objetos, Pessoas, Ambientes) e, principalmente, os relacionamentos sociais e interações entre elas, permitindo consultas avançadas e raciocínio automático.',
     },
   ];
 
   return (
     <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md dark:shadow-lg p-6 md:p-8 mb-8">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
-        <span className="mr-3 text-blue-600 dark:text-blue-400">
-          <Folder className="w-7 h-7" />
-        </span>
-        Repositórios Vinculados
-      </h2>
+      <Title icon={Folder} title="Repositórios Vinculados" />
 
       <div className="space-y-4">
         {repositories.map((repo) => (

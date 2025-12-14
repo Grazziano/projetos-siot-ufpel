@@ -1,5 +1,6 @@
 import { Hammer } from 'lucide-react';
 import { Badge } from './ui/badge';
+import Title from './Title';
 
 export default function Technologies() {
   const tecks = [
@@ -11,13 +12,8 @@ export default function Technologies() {
   ];
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 mb-8">
-      <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
-        <span className="mr-2 dark:text-blue-400">
-          <Hammer />
-        </span>
-        Tecnologias Utilizadas
-      </h2>
+    <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md dark:shadow-lg p-6 md:p-8 mb-8">
+      <Title icon={Hammer} title="Tecnologias Utilizadas" />
 
       <div className="flex flex-wrap gap-3">
         {tecks.map((tech) => (

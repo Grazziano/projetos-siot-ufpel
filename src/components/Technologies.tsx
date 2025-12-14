@@ -6,6 +6,7 @@ export default function Technologies() {
   const tecks = [
     { name: 'MongoDB', link: 'https://www.mongodb.com/' },
     { name: 'NestJS', link: 'https://nestjs.com/' },
+    { name: 'React.js', link: 'https://react.dev/' },
     { name: 'Flutter', link: 'https://flutter.dev/' },
     { name: 'ETL', link: 'https://www.ibm.com/br-pt/think/topics/etl' },
     { name: 'Node.js', link: 'https://nodejs.org/pt' },

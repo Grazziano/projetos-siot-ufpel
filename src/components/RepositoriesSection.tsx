@@ -41,17 +41,19 @@ export default function RepositoriesSection() {
   ];
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md dark:shadow-lg p-6 mb-8">
-      <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
-        <span className="mr-2 dark:text-blue-400">
-          <Folder />
+    <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md dark:shadow-lg p-6 md:p-8 mb-8">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
+        <span className="mr-3 text-blue-600 dark:text-blue-400">
+          <Folder className="w-7 h-7" />
         </span>
         Repositórios Vinculados
       </h2>
 
-      {repositories.map((repo) => (
-        <AlertComponent {...repo} key={repo.title} />
-      ))}
+      <div className="space-y-4">
+        {repositories.map((repo) => (
+          <AlertComponent {...repo} key={repo.title} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -26,34 +26,79 @@ export function ThemeProvider({
   storageKey = 'vite-ui-theme',
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-  );
+  // Safe lazy initializer (SSR-friendly)
+  const getInitialTheme = (): Theme => {
+    if (typeof window === 'undefined') return defaultTheme;
+    try {
+      const stored = localStorage.getItem(storageKey) as Theme | null;
+      if (stored) return stored;
+      return defaultTheme;
+    } catch {
+      return defaultTheme;
+    }
+  };
+
+  const [theme, setThemeState] = useState<Theme>(getInitialTheme);
 
   useEffect(() => {
     const root = window.document.documentElement;
 
-    root.classList.remove('light', 'dark');
+    const applyTheme = (t: Theme) => {
+      root.classList.remove('light', 'dark');
+      if (t === 'system') {
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+          .matches
+          ? 'dark'
+          : 'light';
+        root.classList.add(systemTheme);
+      } else {
+        root.classList.add(t);
+      }
+    };
 
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
-        ? 'dark'
-        : 'light';
+    applyTheme(theme);
 
-      root.classList.add(systemTheme);
-      return;
+    // If using system, listen to changes in prefers-color-scheme
+    let mq: MediaQueryList | null = null;
+    const handleSystemChange = (e: MediaQueryListEvent) => {
+      if (theme !== 'system') return;
+      const newSystem = e.matches ? 'dark' : 'light';
+      root.classList.remove('light', 'dark');
+      root.classList.add(newSystem);
+    };
+
+    if (theme === 'system' && typeof window !== 'undefined') {
+      mq = window.matchMedia('(prefers-color-scheme: dark)');
+      if ((mq as any).addEventListener) {
+        (mq as any).addEventListener('change', handleSystemChange);
+      } else {
+        // legacy
+        (mq as any).addListener(handleSystemChange);
+      }
     }
 
-    root.classList.add(theme);
+    return () => {
+      if (mq) {
+        if ((mq as any).removeEventListener) {
+          (mq as any).removeEventListener('change', handleSystemChange);
+        } else {
+          (mq as any).removeListener(handleSystemChange);
+        }
+      }
+    };
   }, [theme]);
+
+  const setTheme = (newTheme: Theme) => {
+    try {
+      if (typeof window !== 'undefined')
+        localStorage.setItem(storageKey, newTheme);
+    } catch {}
+    setThemeState(newTheme);
+  };
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
-    },
+    setTheme,
   };
 
   return (

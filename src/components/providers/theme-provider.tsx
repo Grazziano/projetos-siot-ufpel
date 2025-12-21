@@ -69,20 +69,43 @@ export function ThemeProvider({
 
     if (theme === 'system' && typeof window !== 'undefined') {
       mq = window.matchMedia('(prefers-color-scheme: dark)');
-      if ((mq as any).addEventListener) {
-        (mq as any).addEventListener('change', handleSystemChange);
-      } else {
-        // legacy
-        (mq as any).addListener(handleSystemChange);
+
+      if (
+        'addEventListener' in mq &&
+        typeof mq.addEventListener === 'function'
+      ) {
+        mq.addEventListener(
+          'change',
+          handleSystemChange as unknown as EventListener
+        );
+      } else if ('addListener' in mq) {
+        // legacy browsers
+        (
+          mq as unknown as {
+            addListener: (handler: (e: MediaQueryListEvent) => void) => void;
+          }
+        ).addListener(handleSystemChange);
       }
     }
 
     return () => {
       if (mq) {
-        if ((mq as any).removeEventListener) {
-          (mq as any).removeEventListener('change', handleSystemChange);
-        } else {
-          (mq as any).removeListener(handleSystemChange);
+        if (
+          'removeEventListener' in mq &&
+          typeof mq.removeEventListener === 'function'
+        ) {
+          mq.removeEventListener(
+            'change',
+            handleSystemChange as unknown as EventListener
+          );
+        } else if ('removeListener' in mq) {
+          (
+            mq as unknown as {
+              removeListener: (
+                handler: (e: MediaQueryListEvent) => void
+              ) => void;
+            }
+          ).removeListener(handleSystemChange);
         }
       }
     };
@@ -92,7 +115,10 @@ export function ThemeProvider({
     try {
       if (typeof window !== 'undefined')
         localStorage.setItem(storageKey, newTheme);
-    } catch {}
+    } catch (e) {
+      // Ignore storage errors (e.g., quota, privacy settings)
+      console.warn('Could not persist theme preference', e);
+    }
     setThemeState(newTheme);
   };
 
@@ -108,6 +134,8 @@ export function ThemeProvider({
   );
 }
 
+// Allow exporting this hook alongside the component (needed for consuming code)
+// eslint-disable-next-line react-refresh/only-export-components
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext);
 
